@@ -5,7 +5,7 @@ HERMES is an experimental pipeline for aligning natural-language mathematical pr
 ---
 
 ## Project Structure
-
+```
 HERMES/
 ├── scripts/
 │ ├── create_pairs.py # Load ProofNet from HF Parquet and build pairs.jsonl
@@ -24,7 +24,7 @@ HERMES/
 │ ├── embeddings/ # stored NL / Lean hidden states
 │ └── meta/ # metadata parquet files
 └── project_config.yaml # model + extraction + dataset configuration
-
+```
 ---
 
 ## Installation
