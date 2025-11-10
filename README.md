@@ -29,11 +29,12 @@ HERMES/
 
 ## Installation
 
+```
 python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
-
+```
 Dependencies:
 
 - torch (>= 2.2)
@@ -50,9 +51,9 @@ Dependencies:
 ## Data Preparation
 
 ### Step 1 — Build `pairs.jsonl`
-
+```
 python -m scripts.create_pairs
-
+```
 This:
 
 - downloads `validation` and `test`
@@ -66,9 +67,9 @@ data/pairs.jsonl
 ## Embedding Extraction
 
 Extract hidden states from NL and Lean models.
-
+```
 python -m scripts.extract_embeddings --config project_config.yaml
-
+```
 This:
 
 - loads NL model: `deepseek-ai/DeepSeek-Prover-V2-7B`
