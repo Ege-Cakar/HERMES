@@ -1,0 +1,15 @@
+data:
+  input_jsonl: "data/pairs.jsonl"    # [{"id": "...", "nl_text": "...", "lean_text": "..."}]
+  out_dir: "outputs/"
+
+models:
+  nl_model: "deepseek-ai/deepseek-coder-1.3b-base"
+  lean_model: "deepseek-ai/deepseek-coder-1.3b-base"
+
+extract:
+  nl_layer: -1
+  lean_layer: -1
+  max_length: 2048
+  batch_size: 2
+  fp16: true
+  save_format: "parquet"  # parquet|npz

@@ -1,0 +1,91 @@
+# ----------------------------
+# Python / virtual environment
+# ----------------------------
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ----------------------------
+# OS files
+# ----------------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------------
+# IDE files
+# ----------------------------
+.vscode/
+.idea/
+
+# ----------------------------
+# Hugging Face model caches
+# ----------------------------
+# Avoid pushing multi-GB model shards
+models/
+*/snapshots/
+*/repository/
+*.safetensors
+*.bin
+
+# Hugging Face local cache folders
+huggingface/
+cache/
+~/.cache/huggingface/
+~/.cache/
+
+# ----------------------------
+# Data & generated datasets
+# ----------------------------
+data/
+outputs/
+*.jsonl
+*.parquet
+*.npz
+*.csv
+
+# Allow only config files through:
+!project_config.yaml
+
+# ----------------------------
+# Logs
+# ----------------------------
+logs/
+*.log
+
+# ----------------------------
+# Checkpoints
+# ----------------------------
+checkpoints/
+*.pt
+*.ckpt
+
+# ----------------------------
+# Temporary / runtime files
+# ----------------------------
+*.tmp
+*.temp
+*.lock
+
+# ----------------------------
+# Jupyter notebook checkpoints
+# ----------------------------
+.ipynb_checkpoints/
+
+# ----------------------------
+# PyTorch + CUDA + Accelerate cache
+# ----------------------------
+torch_cache/
+*.pt
+*.bin
+
+# ----------------------------
+# Build / packaging
+# ----------------------------
+build/
+dist/
+*.egg-info/
