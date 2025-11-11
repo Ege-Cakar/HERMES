@@ -41,7 +41,7 @@ cache/
 # ----------------------------
 # Data & generated datasets
 # ----------------------------
-data/
+
 outputs/
 *.jsonl
 *.parquet

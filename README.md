@@ -52,7 +52,7 @@ Dependencies:
 
 ### Step 1 — Build `pairs.jsonl`
 ```
-python -m scripts.create_pairs
+python scripts/prepare_dataset.py --config project_config.yaml
 ```
 This:
 
@@ -61,7 +61,7 @@ This:
 - removes empty entries
 - writes:
 
-data/pairs.jsonl
+```data/pairs.jsonl```
 ---
 
 ## Embedding Extraction
