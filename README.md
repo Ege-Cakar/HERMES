@@ -52,7 +52,7 @@ Dependencies:
 
 ### Step 1 — Build `pairs.jsonl`
 ```
-python scripts/prepare_dataset.py --config project_config.yaml
+python -m scripts.prepare_dataset
 ```
 This:
 
@@ -62,6 +62,17 @@ This:
 - writes:
 
 data/pairs.jsonl
+
+### Step 2 - Generate Lean Embeddings
+TODO
+
+## Step 3 - Prepare Dataset
+
+``` 
+python -m scripts.prepare_dataset
+```
+
+merges NL + Lean into metadata
 ---
 
 ## Embedding Extraction
