@@ -71,6 +71,11 @@ def main(cfg):
     out_dir = cfg["data"]["out_dir"]
     ensure_dir(out_dir)
 
+    # Convert fp16 → fp32 for Parquet compatibility
+    if cfg["extract"]["save_format"] != "npz":
+        embed_nl = embed_nl.astype("float32")
+        embed_lean = embed_lean.astype("float32")
+
     if cfg["extract"]["save_format"] == "npz":
         save_npz(embed_nl, os.path.join(out_dir, "nl_embeddings.npz"))
         save_npz(embed_lean, os.path.join(out_dir, "lean_embeddings.npz"))
@@ -79,7 +84,7 @@ def main(cfg):
         save_parquet(embed_nl, os.path.join(out_dir, "nl_embeddings.parquet"))
         save_parquet(embed_lean, os.path.join(out_dir, "lean_embeddings.parquet"))
         print("Saved embeddings in Parquet format.")
-
+        
     print("Done.")
 
 
